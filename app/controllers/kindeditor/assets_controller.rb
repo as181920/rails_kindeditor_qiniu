@@ -6,10 +6,11 @@ class Kindeditor::AssetsController < ApplicationController
     @img_file = params[:imgFile]
     upload_token = generate_upload_token
     key = generate_key
+    bucket = QINIU_CONFIG["bucket"]
     response = Qiniu::RS.upload_file \
       uptoken:             upload_token,
       file:                @img_file.tempfile.path,
-      bucket:              "testimages",
+      bucket:              bucket,
       key:                 key,
       note:                "rails kindeditor"
     
@@ -19,14 +20,14 @@ class Kindeditor::AssetsController < ApplicationController
       file_type:                    @img_file.content_type,
       file_size:                    @img_file.size
     p response # should be checked for error handle
-    render :text => ({:error => 0, :url => "http://testimages.qiniudn.com/#{key}"}.to_json)
+    render :text => ({:error => 0, :url => "http://#{bucket}.qiniudn.com/#{key}"}.to_json)
   end
 
   private
   def generate_upload_token
     Qiniu::RS.generate_upload_token \
-      scope:               "testimages",
-      customer:            "as181920"
+      scope:               QINIU_CONFIG["bucket"],
+      customer:            "rails_kindeditor"
   end
 
   def generate_key

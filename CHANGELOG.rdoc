@@ -1,0 +1,15 @@
+== 0.0.4
+
+* make bucket configurable via config/qiniu.yml
+
+== 0.0.3
+
+* gem 命名修改导致engine require问题的修复
+
+== 0.0.2
+
+* gem 命名和对应修改
+
+== 0.0.1
+
+* 粗暴修改

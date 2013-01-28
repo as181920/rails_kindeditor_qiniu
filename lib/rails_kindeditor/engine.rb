@@ -1,4 +1,4 @@
-require "rails_kindeditor"
+require "rails_kindeditor_qiniu"
 require "rails"
 require "action_controller"
 
