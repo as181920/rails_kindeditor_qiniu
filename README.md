@@ -1,4 +1,5 @@
 对rails_kindeditor的简单粗暴的修改，将后台存储改file为qiniu。
+目前仅测试使用图片上传。
 
 ### Run install generator:
 
