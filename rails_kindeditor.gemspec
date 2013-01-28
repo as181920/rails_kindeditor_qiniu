@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.version     = RailsKindeditor::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = "Macrow"
-  s.email       = "Macrow_wh@163.com"
-  s.homepage    = "http://github.com/Macrow"
+  s.email       = "as181920@hotmail.com"
+  s.homepage    = "http://github.com/as181920"
   s.summary     = "Kindeditor for Ruby on Rails"
   s.description = "rails_kindeditor will helps your rails app integrate with kindeditor, including images and files uploading."
 
@@ -18,6 +18,4 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_paths = ["lib"]
 
-  s.add_dependency("carrierwave")
-  s.add_dependency("mini_magick")
 end
