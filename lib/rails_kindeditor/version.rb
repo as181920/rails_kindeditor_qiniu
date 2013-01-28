@@ -1,4 +1,4 @@
 module RailsKindeditor
-  VERSION = "0.3.11"
+  VERSION = "0.0.1"
 end
 
